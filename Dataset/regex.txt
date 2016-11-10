@@ -1,0 +1,70 @@
+Removing new line: 
+	\n(["£]) 
+	by \1
+
+Fee: 
+	"([£])([0-9]*)([,])([0-9]*)([,])([0-9]*)" 
+	by \2\4\6
+
+	"([£])([0-9]*)([,])([0-9]*)" 
+	by \2\4
+
+Stupid chars:
+	if !supportAnnotations![[][0-9]*[]]endif!
+	by null
+
+Prem,Pos,Pts:
+	[A-Za-z]*\n[A-Za-z]*\n[A-Za-z]*,[,",-£0-9]*\n[0-9]*[\n0-9]*
+	by null
+
+In/Out:
+	(Released)
+	by \1,Out
+
+	(Free)
+	by \1,Out
+
+	(Nominal)
+	by \1,Out
+
+	(Signed)
+	by \1,In
+
+	(Undisclosed)
+	by \1,In
+
+	[,]([0-9]*)
+	by \1,In
+
+For removing symbols and comma from number:
+	"£([0-9]*)[,]*([0-9]*)[,]*([0-9]*")
+	by \1\2\3
+
+For removing non-ASCII char: 
+	[^A-Za-z0-9/-' ,\n]
+	by null
+
+For removing Season:
+	Season [0-9]*/[0-9]*\n
+	by null
+
+For removing null appearances data:
+	[A-Za-z ]*,[A-Z],[-0]+,[-0]+,[-0]+,[-0]+\n
+	by null
+
+standings data:
+	
+	[ ]*[0-9]+[.][ ]
+	by null
+
+	[ ]+
+	by ,
+
+	[,0-9]*[:][ ,0-9]*[:][0-9]*
+	by null
+
+	[:]([0-9]*)[ ]*
+	by ,\1,
+
+	([A-Za-z]+),([A-Za-z]+)
+	by \1 \2

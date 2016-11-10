@@ -1,0 +1,402 @@
+/*  font declaration */
+@font-face {
+   font-family: museo-sans;
+   src: url(museo/MuseoSans-500.otf);
+}
+
+@font-face {
+   font-family: futura;
+   src: url(futura/FuturaStd-Medium.otf);
+}
+
+@font-face {
+   font-family: futura-light;
+   src: url(futura/FuturaStd-Light.otf);
+}
+
+FuturaStd-Light
+/* declaration end */
+
+body {
+    overflow-x: hidden;
+}
+
+.med{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.narrow{
+	padding: 0px;
+}
+
+.title-header {
+	font-size: 34px;
+	line-height: 36px;
+    font-family: 'futura-light', sans-serif;
+    color: #282828;
+    margin: 36px 0px 16px 0px;
+    -webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.text-shrink{
+	font-size: 21px;
+	line-height: 21px;
+    margin: 12px 0px 12px 0px;
+}
+
+h3.short-bio {
+	font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    line-height: 32px;
+    color: #282828;
+    margin: 16px 0px 24px 0px;
+}
+
+h4{
+	font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    line-height: 21px;
+    color: #282828;
+    margin: 16px 0px 24px 0px;
+}
+.uppercase{
+	text-transform: uppercase;
+}
+
+a.page-header:hover,
+a.page-header:focus,
+a.page-header:active {
+	text-decoration: none;
+	color: #f47d39;
+}
+
+div.social-buttons{
+	margin-bottom: 36px;
+}
+
+.circle{
+	border-style: solid;
+	border-width: 1pt;
+	border-color: #f47d39;
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+}
+
+a.social-icons{
+	color: #f47d39;
+	margin: 0px 24px 0px 24px;
+}
+
+a.social-icons:hover,
+a.social-icons:focus,
+a.social-icons:active {
+	text-decoration: none;
+	color: #fff;
+}
+
+.circle:hover{
+	background-color: #ef9a3c;
+	border-color: #ef9a3c;
+}
+
+.fa.tiny {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+}
+
+nav.navbar{
+	border: 0px;
+	margin: 0px;
+	background: white;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.nav-fix-top{
+	position: fixed;
+	z-index: 99;
+	width: inherit;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+nav.navbar.shrink{
+	min-height: 60px;
+}
+
+div.hr {
+	background: #fff  no-repeat scroll center;
+	height: 56px;
+    border-top: 1px solid #a5a4a4;
+    border-bottom: 1px solid #a5a4a4;
+    -webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+div.header-shrink{
+	height: 28px;
+}
+
+div.current-page{
+	width: 108px;
+	height: 24px;
+	background-color: #f2893b;
+	display: inline-block;
+}
+
+div.nav-page-tabs{
+	
+	-webkit-transition: all 0.5s ease;width: 108px;
+	height: 56px;
+	display: inline-block;
+	transition: all 0.5s ease;
+}
+
+div.nav-page-tabs.shrink{
+	width: 108px;
+	height: 28px;
+	display: inline-block;
+}
+
+a.quick-links{
+	text-transform: uppercase;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	color: #4c4c4d;
+	font-size: 15px;
+	line-height: 56px;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+a.quick-links.quick-links-shrink{
+	line-height: 26px;
+}
+
+a.quick-links:hover,
+a.quick-links:focus,
+a.quick-links:active {
+    text-decoration: none;
+    color: #f47d39;
+}
+
+a.quick-links-current{
+	text-transform: uppercase;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	color: #fff;
+	font-size: 15px;
+	margin-bottom: 0px;
+	line-height: 24px;
+}
+
+a.quick-links-current:hover,
+a.quick-links-current:focus,
+a.quick-links-current:active {
+    text-decoration: none;
+    color: #ddd;
+}
+
+p.content {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	color: #4c4c4d;
+	font-size: 16px;
+}
+
+.cover{
+	height: 480px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: 144px 0px 18px 0px;
+}
+
+.project-details {
+	font-family: 'Ubuntu';
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 28px;
+	margin: 0px;
+}
+
+.details {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	color: #4c4c4d;
+	font-size: 16px;
+}
+
+.project-img{
+	padding: 48px;
+}
+
+div.sr {
+	height: 1px;
+    background: #a5a4a4;
+    margin: 18px 0px;
+}
+
+h3.sub-header{
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 26px;
+	color: #757575;
+	margin: 0px;
+}
+
+div.section-header-enhance{
+	margin: 90px 0px 48px 0px;
+	height: 28px;
+	width: 144px;
+	display: inline-block;
+	border-style: solid;
+    border-width: 1px;
+    border-color: #ABABAB;
+}
+
+h3.project-header {
+	font-family: 'futura';
+	text-transform: uppercase;
+	margin-bottom: 36px;
+}
+
+.portfolio-item{
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 10px 0px 10px 0px;
+}
+
+.portfolio-item:hover {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 10px 0px 10px 0px;
+}
+
+div.brief{
+	padding-right: 45px;
+}
+
+div.footer{
+	height: 72px;	
+}
+
+div.project-list {
+	width: 180px;
+	height: 36px;
+	display: inline-block;
+}
+
+p.footer-text{
+	margin: 24px 0px 24px 0px;
+	line-height: 24px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	color: #4c4c4d;
+	font-size: 15px;
+}
+
+a.footer-list {
+	line-height: 36px;
+	font-family: 'Ubuntu';
+	font-weight: 300;
+	font-size: 16px;
+	color: #4c4c4d;
+}
+
+a.footer-list:hover,
+a.footer-list:focus,
+a.footer-list:active {
+	line-height: 36px;
+	font-family: 'Ubuntu';
+	font-weight: 300;
+	font-size: 16px;
+	text-decoration: none;
+	color: #f47d39;
+}
+
+.no-pad {
+	padding: 0px;
+}
+
+.left-pad {
+	padding-left: 36px;
+}
+
+.bio-header {
+	font-family: 'futura';
+	text-transform: uppercase;
+}
+
+.div-btn{
+	margin: 90px auto 48px auto;
+	height: 36px;
+	width: 144px;
+	background-color: #282828;
+	color: white;
+	line-height: 36px;
+	text-align: center;
+	font-family: 'futura-light';
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.insta {
+	padding: 0px 36px;
+}
+
+.caption {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    opacity: 0;
+    background: #111;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+.caption:hover {
+    opacity: 0.9;
+}
+
+.caption .caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -24px;
+    text-align: center;
+    font-family: 'futura', sans-serif;
+    font-size: 21px;
+    color: #fff;
+}
+
+.caption .caption-keyword {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: 8px;
+    padding: 0px 12px;
+    text-align: center;
+    font-family: 'futura-light', sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    color: #fff;
+}
+
+.caption .caption-content i {
+    margin-top: -12px;
+}
+
+.caption .caption-content h3,
+.caption .caption-content h4 {
+    margin: 0;
+}
