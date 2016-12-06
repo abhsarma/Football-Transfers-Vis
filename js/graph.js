@@ -7,7 +7,7 @@
 var clubs = ['arsenal', 'chelsea', 'shitpool', 'manshity', 'man-utd']
 
 // Variables for SVG Dimensions
-var width = 800, height = 500, xPadding = 40, yPadding = 40, 
+var width = 800, height = 420, mHeight = 80, xPadding = 40, yPadding = 30, minPadding = 5,
 	yMargin = 20, xLabelX = 720, xLabelY = 450, yLabelX = xPadding+20, yLabelY = yMargin+210,
 	widthMin = 210, heightMin = 180,
 
@@ -24,6 +24,12 @@ var width = 800, height = 500, xPadding = 40, yPadding = 40,
 	imgHeight = 32, imgWidth = 32;
 
 // SVG, Scales and Axes Declaration
+var eventCanvas = d3.select("div.barVis")
+			.append("svg")
+			.attr("class", "eventCanvas")
+			.attr("height", mHeight)
+			.attr("width", width);
+
 var bar = d3.select("div.barVis")
 			.append("svg")
 			.attr("class", "barCanvas")
@@ -34,31 +40,35 @@ var svg1 = d3.select("div.barVis")
 			.append("svg")
 			.attr("class", "pie-data")
 			.attr("width", widthMin)
-			.attr("height", (r + 3*m) * 2)
+			.attr("height", (r + 2.5*m) * 2)
 			.attr("style", "left: 60px");
 
 var svg2 = d3.select("div.barVis")
 			.append("svg")
 			.attr("class", "pie-data")
 			.attr("width", widthMin)
-			.attr("height", (r + 3*m) * 2)
+			.attr("height", (r + 2.5*m) * 2)
 			.attr("style", "left: 280px");
 
 var svg3 = d3.select("div.barVis")
 			.append("svg")
 			.attr("class", "pie-data")
 			.attr("width", widthMin)
-			.attr("height", (r + 3*m) * 2)
+			.attr("height", (r + 2.5*m) * 2)
 			.attr("style", "left: 500px");
 
 // Define Scales for Year, Fee, Color and Position
 var barxScale = d3.scale.linear()
-				.domain([2001, 2017])
-				.range([40, 780]);
+				.domain([2001, 2016])
+				.range([40, width-20]);
 
 var baryScale = d3.scale.linear()
 				.domain([0, maxBuy])
 				.range([height - yPadding, yPadding + yMargin]);
+
+var eventyScale = d3.scale.linear()
+				.domain([0, maxBuy])
+				.range([mHeight - minPadding, 2*minPadding]);
 
 var barColor = d3.scale.ordinal()
 				.domain(["In", "Out"])
@@ -89,6 +99,12 @@ var baryAxis = d3.svg.axis()
 					.scale(baryScale)
 					.orient("left")
 					.ticks("7");
+
+eventCanvas.append("g")
+	.attr("class", "axis")
+	.attr("id", "barX")
+	.attr("transform", "translate(0," + (mHeight - xPadding) + ")")
+	.call(barxAxis);
 
 bar.append("g")
 	.attr("class", "axis")
@@ -213,7 +229,7 @@ d3.csv("data/arsenal/ArsenalTransfers.csv", function(data) {
 		array.push((+data[i].Fee));
 	}
 	maxArs = Math.floor(Math.max.apply(null, array));
-	maxBuy = maxArs + 30;
+	maxBuy = maxArs + 10;
 
 	drawEvents(maxBuy, events1);
 	posLine(pos1);
@@ -330,13 +346,9 @@ function setBar(id, name){
 }
 
 function drawEvents(maxY, events){
-	bar.selectAll(".eventRect").remove();
-
-	var baryUpd = d3.scale.linear()
-				.domain([0, maxY])
-				.range([height - yPadding, yPadding + yMargin]);
-
-	var eventRect = bar.selectAll(".eventRect")
+	eventCanvas.selectAll(".eventRect").remove();
+	console.log(maxY);
+	var eventRect = eventCanvas.selectAll(".eventRect")
 						.data(events)
 						.enter()
 						.append("rect")
@@ -347,16 +359,16 @@ function drawEvents(maxY, events){
 						.attr("x", function(d){
 							return barxScale(d.Year) + xPosMonth(d.Month);
 						})
-						.attr("y", baryUpd(maxY) + 30)
+						.attr("y", eventyScale(0)/5)
 						.attr("width", 4)
-						.attr("height", baryUpd(0) - baryUpd(maxY) - 30)
+						.attr("height", eventyScale(0)*2/3)
 						.attr("fill", "#f9d45f")
 						.attr("opacity", 0.5);
 
 	eventRect.on("mouseover", function(d){
 		var selEventRect = d3.select(this);
 		selEventRect.moveToFront();
-		eventPopup(d, baryUpd, maxY); 
+		eventPopup(d, baryScale, maxY); 
 	});
 	eventRect.on("mouseout",function(){
 		var selEventRect = d3.select(this);
@@ -368,19 +380,19 @@ function drawEvents(maxY, events){
 function eventPopup(d, yscale, maxY) {
 	bar.append('rect')
 		.attr("class", "event-label label-container")
-		.attr("transform", "translate("+ (barxScale(d.Year)+xPosMonth(d.Month)+8) +","+ (yscale(maxY)) +")")
+		.attr("transform", "translate("+ (barxScale(d.Year)+xPosMonth(d.Month)-40) +",0)")
 		.attr("opacity", 0.8);
 
 	bar.append("text")
 		.attr("class", "data-label event-label")
 		.attr("dy", "30")
-		.attr("transform", "translate("+ (barxScale(d.Year)+xPosMonth(d.Month)+24) +","+ yscale(maxY) +")")
+		.attr("transform", "translate("+ (barxScale(d.Year)+xPosMonth(d.Month)-24) +",0)")
 		.text(d.Month+" "+d.Year);
 
 	bar.append("text")
 		.attr("class", "data-label	 event-label")
 		.attr("dy", "48")
-		.attr("transform", "translate("+ (barxScale(d.Year)+xPosMonth(d.Month)+24) +","+ yscale(maxY) +")")
+		.attr("transform", "translate("+ (barxScale(d.Year)+xPosMonth(d.Month)-24) +",0)")
 		.text(d.Desc);
 }
 
@@ -577,14 +589,14 @@ function drawPie(d, e){
 	svg1.append("text")
 		.attr("class", "pie-data")
 		.attr("text-anchor", "middle")
-		.attr("transform", "translate("+ widthMin/2 +","+ (2*r + 3*m) +")")
+		.attr("transform", "translate("+ widthMin/2 +","+ (2*r + 2*m) +")")
 		.attr("dy", lh)
 		.text("Players In");
 
 	svg2.append("text")
 		.attr("class", "pie-data")
 		.attr("text-anchor", "middle")
-		.attr("transform", "translate("+ widthMin/2 +","+ (2*r + 3*m) +")")
+		.attr("transform", "translate("+ widthMin/2 +","+ (2*r + 2*m) +")")
 		.attr("dy", lh)
 		.text("Players Out");
 
@@ -607,7 +619,7 @@ function drawPie(d, e){
 			.enter()
 			.append("g")
 			.attr("class", "arc")
-			.attr("transform", "translate("+ widthMin/2 +","+ (r + 2*m) +")");
+			.attr("transform", "translate("+ widthMin/2 +","+ (r + m) +")");
 
 	var g2 = svg2.selectAll(".arc")
 			.data(function(d){
@@ -616,18 +628,18 @@ function drawPie(d, e){
 			.enter()
 			.append("g")
 			.attr("class", "arc")
-			.attr("transform", "translate("+ widthMin/2 +","+ (r + 2*m) +")");
+			.attr("transform", "translate("+ widthMin/2 +","+ (r + m) +")");
 
 	svg1.append("text")
 		.attr("class", "pie-total")
-		.attr("transform", "translate("+ widthMin/2 +","+ (r + 2*m) +")")
+		.attr("transform", "translate("+ widthMin/2 +","+ (r + m) +")")
 		.attr("dy", 16)
 		.attr("text-anchor", "middle")
 		.text(d.G+d.D+d.M+d.F);
 
 	svg2.append("text")
 		.attr("class", "pie-total")
-		.attr("transform", "translate("+ widthMin/2 +","+ (r + 2*m) +")")
+		.attr("transform", "translate("+ widthMin/2 +","+ (r + m) +")")
 		.attr("dy", 16)
 		.attr("text-anchor", "middle")
 		.text(e.G+e.D+e.M+e.F);
