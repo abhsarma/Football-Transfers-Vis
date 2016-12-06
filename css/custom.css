@@ -40,8 +40,16 @@ svg {
 	margin: 0px 15px;
 }
 
-svg.barCanvas {
+svg.pie-data {
+	margin-top: 0px;
+}
+
+svg.eventCanvas {
 	margin-top: 210px;
+}
+
+svg.barCanvas {
+	margin-top: 0px;
 }
 
 .axis-label {
