@@ -313,10 +313,6 @@ a.footer-list {
 a.footer-list:hover,
 a.footer-list:focus,
 a.footer-list:active {
-	line-height: 36px;
-	font-family: 'Ubuntu';
-	font-weight: 300;
-	font-size: 16px;
 	text-decoration: none;
 	color: #f47d39;
 }
