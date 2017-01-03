@@ -1,10 +1,5 @@
 /*  font declaration */
 @font-face {
-   font-family: museo-sans;
-   src: url(museo/MuseoSans-500.otf);
-}
-
-@font-face {
    font-family: futura;
    src: url(futura/FuturaStd-Medium.otf);
 }
@@ -14,26 +9,49 @@
    src: url(futura/FuturaStd-Light.otf);
 }
 
-FuturaStd-Light
 /* declaration end */
 
 body {
     overflow-x: hidden;
 }
 
-.med{
-	padding-left: 10px;
-	padding-right: 10px;
+
+@media (min-width: 1200px) {
+    .nav-fix-top {
+		position: fixed;
+		width: 1170px;
+		z-index: 99;
+	}
 }
 
-.narrow{
-	padding: 0px;
+@media (min-width: 992px) and (max-width: 1199px) {
+    .nav-fix-top {
+		position: fixed;
+		width: 970px;
+		z-index: 99;
+	}
 }
 
-.title-header {
+@media (min-width: 768px) and (max-width: 991px) {
+    .nav-fix-top {
+		position: fixed;
+		width: 750px;
+		z-index: 99;
+	}
+}
+
+@media (max-width: 767px) {
+    .nav-fix-top {
+		position: fixed;
+		width: calc(100% - 30px);
+		z-index: 99;
+	}
+}
+
+h1 {
 	font-size: 34px;
 	line-height: 36px;
-    font-family: 'futura-light', sans-serif;
+    font-family: 'futura', sans-serif;
     color: #282828;
     margin: 36px 0px 16px 0px;
     -webkit-transition: all 0.5s ease;
@@ -110,7 +128,7 @@ a.social-icons:active {
     line-height: 32px;
 }
 
-nav.navbar{
+.navbar{
 	border: 0px;
 	margin: 0px;
 	background: white;
@@ -118,50 +136,28 @@ nav.navbar{
 	transition: all 0.5s ease;
 }
 
-.nav-fix-top{
-	position: fixed;
-	z-index: 99;
-	width: inherit;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-nav.navbar.shrink{
-	min-height: 60px;
-}
-
 div.hr {
 	background: #fff  no-repeat scroll center;
-	height: 56px;
-    border-top: 1px solid #a5a4a4;
-    border-bottom: 1px solid #a5a4a4;
+	height: 28px;
+    /*border-top: 1px solid #a5a4a4;
+    border-bottom: 1px solid #a5a4a4;*/
     -webkit-transition: all 0.5s ease;
 	transition: all 0.5s ease;
-}
-
-div.header-shrink{
-	height: 28px;
 }
 
 div.current-page{
 	width: 108px;
 	height: 24px;
-	background-color: #f2893b;
 	display: inline-block;
+	border-bottom: 3px solid #f2893b;
 }
 
 div.nav-page-tabs{
-	
-	-webkit-transition: all 0.5s ease;width: 108px;
-	height: 56px;
-	display: inline-block;
-	transition: all 0.5s ease;
-}
-
-div.nav-page-tabs.shrink{
-	width: 108px;
+	-webkit-transition: all 0.5s ease;
+	max-width: 100%;
 	height: 28px;
 	display: inline-block;
+	transition: all 0.5s ease;
 }
 
 a.quick-links{
@@ -170,13 +166,9 @@ a.quick-links{
 	font-weight: 300;
 	color: #4c4c4d;
 	font-size: 15px;
-	line-height: 56px;
+	line-height: 26px;
 	-webkit-transition: all 0.5s ease;
 	transition: all 0.5s ease;
-}
-
-a.quick-links.quick-links-shrink{
-	line-height: 26px;
 }
 
 a.quick-links:hover,
@@ -188,9 +180,9 @@ a.quick-links:active {
 
 a.quick-links-current{
 	text-transform: uppercase;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'futura-light', sans-serif;
 	font-weight: 300;
-	color: #fff;
+	color: #f47d39;
 	font-size: 15px;
 	margin-bottom: 0px;
 	line-height: 24px;
@@ -200,11 +192,10 @@ a.quick-links-current:hover,
 a.quick-links-current:focus,
 a.quick-links-current:active {
     text-decoration: none;
-    color: #ddd;
 }
 
 p.content {
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'futura-light', sans-serif;
 	font-weight: 300;
 	color: #4c4c4d;
 	font-size: 16px;
@@ -217,38 +208,14 @@ p.content {
 	margin: 144px 0px 18px 0px;
 }
 
-.project-details {
-	font-family: 'Ubuntu';
-	font-weight: 500;
-	font-size: 18px;
-	line-height: 28px;
-	margin: 0px;
-}
-
-.details {
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: 300;
-	color: #4c4c4d;
-	font-size: 16px;
-}
-
 .project-img{
 	padding: 48px;
 }
 
 div.sr {
-	height: 1px;
-    background: #a5a4a4;
+	height: 2px;
+    background: #333;
     margin: 18px 0px;
-}
-
-h3.sub-header{
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 26px;
-	color: #757575;
-	margin: 0px;
 }
 
 div.section-header-enhance{
@@ -259,12 +226,6 @@ div.section-header-enhance{
 	border-style: solid;
     border-width: 1px;
     border-color: #ABABAB;
-}
-
-h3.project-header {
-	font-family: 'futura';
-	text-transform: uppercase;
-	margin-bottom: 36px;
 }
 
 .portfolio-item{
@@ -296,7 +257,7 @@ div.project-list {
 p.footer-text{
 	margin: 24px 0px 24px 0px;
 	line-height: 24px;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Helvetica Neue', sans-serif;
 	font-weight: 300;
 	color: #4c4c4d;
 	font-size: 16px;
@@ -304,8 +265,7 @@ p.footer-text{
 
 a.footer-list {
 	line-height: 36px;
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: 300;
+	font-family: 'Helvetica Neue', sans-serif;
 	font-size: 16px;
 	color: #4c4c4d;
 }
