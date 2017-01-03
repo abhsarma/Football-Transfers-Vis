@@ -4,15 +4,16 @@ body {
 }
 
 h1.page-header-text{
-	font-family: 'Playfair Display', serif;
-	font-weight: 400;
-	font-size: 64px;
-	line-height: 72px;
+	font-family: 'Helvetica Neue', serif;
+	font-weight: 900;
+	font-size: 56px;
+	line-height: 60px;
 	color: #333;
 }
 
 h3.sub-header-text {
-	font-family: 'Playfair Display', serif;
+	font-family: 'Helvetica Neue', serif;
+	font-weight: 300;
 	font-style: italic;
 	font-size: 21px;
 	color: #333;
@@ -26,7 +27,7 @@ p.body-text{
 }
 
 h6.text-section-header {
-	font-family: 'Playfair Display', serif;
+	font-family: 'Helvetica Neue', serif;
 	font-weight: 700;
 	font-size: 21px;
 	color: #444;
