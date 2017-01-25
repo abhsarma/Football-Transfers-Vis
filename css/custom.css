@@ -3,14 +3,6 @@ body {
     background: none;
 }
 
-h1.page-header-text{
-	font-family: 'Helvetica Neue', serif;
-	font-weight: 900;
-	font-size: 56px;
-	line-height: 60px;
-	color: #333;
-}
-
 h3.sub-header-text {
 	font-family: 'Helvetica Neue', serif;
 	font-weight: 300;

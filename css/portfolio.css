@@ -9,6 +9,11 @@
    src: url(futura/FuturaStd-Light.otf);
 }
 
+@font-face {
+   font-family: futura-b;
+   src: url(futura/FuturaStd-Heavy.otf);
+}
+
 /* declaration end */
 
 body {
@@ -58,6 +63,13 @@ h1 {
 	transition: all 0.5s ease;
 }
 
+h1.page-header-text{
+	font-family: 'futura-b', sans-serif;
+	font-size: 42px;
+	line-height: 54px;
+	color: #333;
+}
+
 .text-shrink{
 	font-size: 21px;
 	line-height: 21px;
@@ -66,7 +78,7 @@ h1 {
 
 h3.short-bio {
 	font-size: 18px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-weight: 300;
     line-height: 32px;
     color: #282828;
@@ -75,7 +87,7 @@ h3.short-bio {
 
 h4{
 	font-size: 15px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-weight: 300;
     line-height: 21px;
     color: #282828;
@@ -162,7 +174,7 @@ div.nav-page-tabs{
 
 a.quick-links{
 	text-transform: uppercase;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Helvetica Neue', sans-serif;
 	font-weight: 300;
 	color: #4c4c4d;
 	font-size: 15px;
