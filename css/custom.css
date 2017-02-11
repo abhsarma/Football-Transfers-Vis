@@ -1,28 +1,54 @@
+@font-face {
+   font-family: futura;
+   src: url(futura/FuturaStd-Medium.otf);
+}
+
+@font-face {
+   font-family: futura;
+   src: url(futura/FuturaStd-Light.otf);
+}
+
+@font-face {
+   font-family: playfair;
+   src: url(PlayfairDisplay/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+   font-family: playfair-b;
+   src: url(PlayfairDisplay/PlayfairDisplay-Bold.ttf);
+}
+
+@font-face {
+   font-family: ProximaNova;
+   src: url(ProximaNova/ProximaNova-Light.otf);
+}
+
 body {
     overflow-x: hidden;
     background: none;
 }
 
 h3.sub-header-text {
-	font-family: 'Helvetica Neue', serif;
+	font-family: 'ProximaNova', serif;
 	font-weight: 300;
 	font-style: italic;
 	font-size: 21px;
-	color: #333;
+	color: #666;
 }
 
 p.body-text{
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-weight: 300;
 	font-size: 16px;
-	color: #333;
+	color: #666;
 }
 
 h6.text-section-header {
-	font-family: 'Helvetica Neue', serif;
+	font-family: 'Montserrat', serif;
+	font-size: 18px;
 	font-weight: 700;
-	font-size: 21px;
-	color: #444;
+	text-transform: uppercase;
+	color: #2372A1;
 }
 
 p.margin-text {
@@ -111,21 +137,21 @@ div.centered-aligned {
 
 text.data-label {
 	fill: white;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-weight: 300;
 	font-size: 12px;
 }
 
 text.pie-data {
 	fill: black;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-weight: 300;
 	font-size: 14px;
 }
 
 text.pie-data-header {
 	fill: black;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-weight: 300;
 	font-size: 16px;
 }
@@ -133,13 +159,13 @@ text.pie-data-header {
 .label-container{
 	height: 68px;
 	width: 210px;
-	background-color: '#333';
+	background-color: #333;
 }
 
 .label-container-small {
 	height: 64px;
 	width: 210px;
-	background-color: '#333';
+	background-color: #333;
 }
 
 svg.pie-data {
@@ -152,7 +178,7 @@ svg.pie-data {
 .pie-total {
 	fill: #666;
 	font-size: 36px;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-weight: 300;
 }
 
@@ -173,7 +199,7 @@ p.desc {
 	font-size: 24px;
 	line-height: 32px;
 	margin-top: 12px;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	color: #333;
 }
 
@@ -202,7 +228,7 @@ div.color-circle-outline {
 
 p.legend-header{
 	font-size: 16px;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-weight: 400;
 }
 
@@ -212,13 +238,13 @@ div.legend-text{
 	height: 18px;
 	line-height: 18px;
 	margin: 4px 8px;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-size: 14px;
 }
 
 text.pos-label {
 	fill: white;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-weight: 300;
 	font-size: 12px;
 }
@@ -226,7 +252,7 @@ text.pos-label {
 .pos-container{
 	height: 36px;
 	width: 96px;
-	background-color: '#333';
+	background-color: #333;
 }
 
 .player-data-circle {
@@ -248,7 +274,7 @@ button {
 	margin: 0px 12px;
 	text-align: center;
 	color: #333;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-size: 14px;
 }
 
@@ -260,7 +286,7 @@ button {
 	margin: 0px 12px;
 	text-align: center;
 	color: #333;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-size: 14px;
 }
 
@@ -275,7 +301,7 @@ button {
 	margin: 0px 12px;
 	text-align: center;
 	color: #fff;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-size: 14px;
 }
 
@@ -287,7 +313,7 @@ button {
 	margin: 0px 12px;
 	text-align: center;
 	color: #fff;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-size: 14px;
 }
 

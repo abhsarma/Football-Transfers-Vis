@@ -5,13 +5,23 @@
 }
 
 @font-face {
-   font-family: futura-light;
+   font-family: futura;
    src: url(futura/FuturaStd-Light.otf);
 }
 
 @font-face {
-   font-family: futura-b;
-   src: url(futura/FuturaStd-Heavy.otf);
+   font-family: playfair;
+   src: url(PlayfairDisplay/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+   font-family: playfair-b;
+   src: url(PlayfairDisplay/PlayfairDisplay-Bold.ttf);
+}
+
+@font-face {
+   font-family: Proxima Nova;
+   src: url(ProximaNova/ProximaNova-Light.otf);
 }
 
 /* declaration end */
@@ -64,9 +74,9 @@ h1 {
 }
 
 h1.page-header-text{
-	font-family: 'futura-b', sans-serif;
-	font-size: 42px;
-	line-height: 54px;
+	font-family: 'playfair-b', sans-serif;
+	font-size: 60px;
+	line-height: 72px;
 	color: #333;
 }
 
@@ -78,7 +88,7 @@ h1.page-header-text{
 
 h3.short-bio {
 	font-size: 18px;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
     font-weight: 300;
     line-height: 32px;
     color: #282828;
@@ -87,7 +97,7 @@ h3.short-bio {
 
 h4{
 	font-size: 15px;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
     font-weight: 300;
     line-height: 21px;
     color: #282828;
@@ -174,7 +184,7 @@ div.nav-page-tabs{
 
 a.quick-links{
 	text-transform: uppercase;
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'futura-light', sans-serif;
 	font-weight: 300;
 	color: #4c4c4d;
 	font-size: 15px;
