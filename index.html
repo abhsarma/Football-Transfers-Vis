@@ -8,7 +8,6 @@
         <title>Football Visualisation</title>
 
         <!-- JQuery and D3 Libraries -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
         <script src="https://d3js.org/d3.v3.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -88,6 +87,7 @@
                                 <p class="body-text margin-top-md">Couple this with the vast difference in playing styles, climate and pitches across different leagues in defferent nations, or even playing styles of different teams within the same league, make it almost impossible to use a purely statistical approach to cater to a team's needs in the transfer market.</p>
                             </div>
                         </div>
+                        <h6 class="text-section-header margin-top-lg">The Problem</h6>
                         <div class="row">
                             <div class="col-md-6">
                                 <p class="body-text margin-top-md">The Premier League, arguably the biggest league in Football in terms of revenue, consistently dishes out large sums of money to sign players from all over Europe and the rest of the world. However, not all of their signings are able to deliver.</p>
@@ -115,7 +115,7 @@
                     <div class="team-details col-sm-3">
                         <p class="legend-header">Select Team:</p>
                         <div class="dropdown custom-drop">
-                            <button class="btn btn-default dropdown-toggle btn-bar" type="button" data-toggle="dropdown">Arsenal
+                            <button class="btn btn-default dropdown-toggle btn-bar" type="button" data-toggle="dropdown" style="margin-left: 0px">Arsenal
                             <span class="caret"></span></button>
                             <ul class="dropdown-menu dropdown-bar">
                                 <li><a id="arsenal" class="custom-btn" onclick="setBar(this.id, this.text)">Arsenal</a></li>
@@ -125,7 +125,7 @@
                                 <li><a id="man-utd" class="custom-btn" onclick="setBar(this.id, this.text)">Manchester United</a></li>
                             </ul>
                         </div>
-                        <div class="team-id">.</div>
+                        <div class="team-id"></div>
                         <div class="legend">
                             <p class="legend-header">Bar Chart</p>
                             <div class="color-box in" style="background-color: #61B7D1"></div><div class="legend-text">Players coming In</div><br>
@@ -222,16 +222,16 @@
         $(function(){
             $(".dropdown-menu.dropdown-bar").on('click', 'li a', function(){
                 $(".btn-bar:first-child").html($(this).text()+ ' <span class="caret"></span>');
-                $(".btn-bar:first-child").val($(this).text());
+                //$(".btn-bar:first-child").val($(this).text());
             });
         })
 
-        $(function(){
-            $(".dropdown-menu.dropdown-scatter").on('click', 'li a', function(){
-                $(".btn-scatter:first-child").html($(this).text()+ ' <span class="caret"></span>');
-                $(".btn-scatter:first-child").val($(this).text());
-            });
-        })
+        // $(function(){
+        //     $(".dropdown-menu.dropdown-scatter").on('click', 'li a', function(){
+        //         $(".btn-scatter:first-child").html($(this).text()+ ' <span class="caret"></span>');
+        //         $(".btn-scatter:first-child").val($(this).text());
+        //     });
+        // })
 
         $('.btn-purchase').on('click', function(){
             $('.btn-purchase').removeClass('cstm-active-class');
@@ -276,5 +276,14 @@
 
         ga('create', 'UA-79877752-1', 'auto');
         ga('send', 'pageview');
+
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:448403,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
 </html>
