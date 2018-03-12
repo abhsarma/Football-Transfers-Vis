@@ -1,43 +1,8 @@
-@font-face {
-   font-family: futura;
-   src: url(futura/FuturaStd-Medium.otf);
-}
 
-@font-face {
-   font-family: futura;
-   src: url(futura/FuturaStd-Light.otf);
-}
 
-@font-face {
-   font-family: playfair;
-   src: url(PlayfairDisplay/PlayfairDisplay-Regular.ttf);
-}
-
-@font-face {
-   font-family: playfair-b;
-   src: url(PlayfairDisplay/PlayfairDisplay-Bold.ttf);
-}
-
-body {
-    overflow-x: hidden;
-    background: none;
-}
-
-h3.sub-header-text {
-	font-family: 'Avenir Next', serif;
-	font-style: italic;
-	font-size: 21px;
-	color: #666;
-}
-
-p.body-text{
-	font-family: 'Avenir Next', sans-serif;
-	font-size: 16px;
-	color: #666;
-}
 
 h6.text-section-header {
-	font-family: 'Montserrat', serif;
+	font-family: 'AvenirNext-Bold', serif;
 	font-size: 18px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -45,7 +10,7 @@ h6.text-section-header {
 }
 
 p.margin-text {
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'AvenirNext-Medium', sans-serif;
 	font-size: 14px;
 }
 
@@ -67,7 +32,7 @@ svg.barCanvas {
 
 .axis-label {
 	color: #333;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'AvenirNext-Medium', sans-serif;
 	font-weight: 300;
 	font-size: 16px;
 }
@@ -99,8 +64,9 @@ svg.barCanvas {
 }
 
 .axis text{
-    color: #333;
-	font-family: 'Helvetica Neue', sans-serif;
+    fill: #444;
+	font-family: 'AvenirNext-Regular', sans-serif;
+	font-weight: 400;
 	font-size: 14px;
 }
 
@@ -130,21 +96,21 @@ div.centered-aligned {
 
 text.data-label {
 	fill: white;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'AvenirNext-Medium', sans-serif;
 	font-weight: 300;
 	font-size: 12px;
 }
 
 text.pie-data {
 	fill: black;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'AvenirNext-Medium', sans-serif;
 	font-weight: 300;
 	font-size: 14px;
 }
 
 text.pie-data-header {
 	fill: black;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'AvenirNext-Medium', sans-serif;
 	font-weight: 300;
 	font-size: 16px;
 }
@@ -171,7 +137,7 @@ svg.pie-data {
 .pie-total {
 	fill: #666;
 	font-size: 36px;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'AvenirNext-Medium', sans-serif;
 	font-weight: 300;
 }
 
@@ -181,7 +147,7 @@ svg.pie-data {
 }
 
 .team-details{
-	margin-top: 256px;
+	margin-top: 120px;
 }
 
 .team-id {
@@ -192,7 +158,7 @@ p.desc {
 	font-size: 24px;
 	line-height: 32px;
 	margin-top: 12px;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'AvenirNext-Medium', sans-serif;
 	color: #333;
 }
 
@@ -221,7 +187,7 @@ div.color-circle-outline {
 
 p.legend-header{
 	font-size: 16px;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'AvenirNext-Medium', sans-serif;
 	font-weight: 400;
 }
 
@@ -231,13 +197,13 @@ div.legend-text{
 	height: 18px;
 	line-height: 18px;
 	margin: 4px 8px;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'AvenirNext-Medium', sans-serif;
 	font-size: 14px;
 }
 
 text.pos-label {
 	fill: white;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'AvenirNext-Medium', sans-serif;
 	font-weight: 300;
 	font-size: 12px;
 }
@@ -267,7 +233,7 @@ button {
 	margin: 0px 12px;
 	text-align: center;
 	color: #333;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'AvenirNext-Medium', sans-serif;
 	font-size: 14px;
 }
 
@@ -279,7 +245,7 @@ button {
 	margin: 0px 12px;
 	text-align: center;
 	color: #333;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'AvenirNext-Medium', sans-serif;
 	font-size: 14px;
 }
 
@@ -294,7 +260,7 @@ button {
 	margin: 0px 12px;
 	text-align: center;
 	color: #fff;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'AvenirNext-Medium', sans-serif;
 	font-size: 14px;
 }
 
@@ -306,7 +272,7 @@ button {
 	margin: 0px 12px;
 	text-align: center;
 	color: #fff;
-	font-family: 'Avenir Next', sans-serif;
+	font-family: 'AvenirNext-Medium', sans-serif;
 	font-size: 14px;
 }
 
@@ -318,9 +284,23 @@ button {
 	min-width: 96px;
 }
 
+/*
+================================
+	START OF MARGIN CLASSES
+================================
+*/
+
+.margin-shift-up{
+	margin-top: -12px;
+}
+
 .nomargin {
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
+}
+
+.nomargin-top {
+	margin-top: 0px !important;
 }
 
 .nomargin-side {
@@ -354,6 +334,10 @@ button {
 	margin-bottom: 24px !important;
 }
 
+.margin-pf {
+	margin-bottom: 30px;
+}
+
 .margin-top-md {
 	margin-top: 36px !important;
 }
@@ -362,24 +346,58 @@ button {
 	margin-bottom: 36px !important;
 }
 
+.margin-top-lmd {
+	margin-top: 60px !important;
+}
+
+.margin-btm-lmd {
+	margin-bottom: 60px !important;
+}
+
 .margin-top-lg {
-	margin-top: 64px !important;
+	margin-top: 80px !important;
 }
 
 .margin-btm-lg {
-	margin-bottom: 64px !important;
+	margin-bottom: 80px !important;
 }
 
 .margin-lg {
-	margin-top: 64px !important;
-	margin-bottom: 64px !important;
+	margin-top: 80px !important;
+	margin-bottom: 80px !important;
+}
+
+.margin-top-xl {
+	margin-top: 108px !important;
 }
 
 .padding-sm {
-	padding-left: 10px !important;
-	padding-right: 10px !important;
+	padding: 5px !important;
+}
+
+.padding-md {
+	padding: 15px !important;
+}
+
+.no-padding {
+	padding-left: 0px !important;
 }
 
 .margin-xs-shrink {
 	margin-top: 1px !important;
 }
+
+.shiftup{
+	margin-top: -32px !important;
+}
+
+.shiftdown {
+	margin-top: 27px !important;
+}
+
+
+/*
+================================
+	END OF MARGIN CLASSES
+================================
+*/

@@ -8,8 +8,10 @@
         <title>Football Visualisation</title>
 
         <!-- JQuery and D3 Libraries -->
-        <script src="https://d3js.org/d3.v3.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script  src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.1.0/d3-annotation.min.js"></script>
+        
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
         <!-- Bootstrap Core CSS  -->
@@ -37,31 +39,38 @@
     </head>
     <body id="page-top" class="index">
     <!-- Navigation Bar -->
-        <div class="navbar nav-fix-top">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
-                    <div class="container">
-                        <a class="page-header" id="title-header" href="../index.html">
-                            <h1 class="text-shrink">Abhraneel Sarma</h1>
-                        </a>
-                        
-                        <div class="hr">
-                            <div class="row">
-                                <div class="col-sm-2 col-sm-offset-3 col-xs-4">
-                                    <div class="nav-page-tabs">
-                                        <div class="current-page">
-                                            <a class="quick-links-current" href="../index.html">Work</a>
+        <nav class="navbar nav-fix-top" style="box-shadow: 0px 2px 5px #ddd;">
+            <div class="container">
+                <div class="navbar-row">
+                    <div class="col-md-12 col-sm-12 col-navbar navbar-header"> 
+                        <div class="navbar-row">  
+                            <div class="col-md-6 col-sm-12 col-navbar">
+                                <div class="nav-name-container">
+                                    <a class="page-header" href="../index.html">
+                                        <h1 class="margin-top-lmd">Abhraneel Sarma</h1>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-navbar">
+                                <div class="hr margin-top-lmd">
+                                    <div class="navbar-row">
+                                        <div class="col-sm-4 col-xs-4 col-navbar">
+                                            <div class="nav-page-tabs">
+                                                <div class="current-page">
+                                                    <a class="quick-links-current" href="../index.html">Work</a>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2 col-xs-4">
-                                    <div class="nav-page-tabs">
-                                        <a class="quick-links" href="https://drive.google.com/file/d/0B7ZA2gHdFDLhdS1PcTJvRTFCVG8/view?usp=sharing" target="_blank">Resume</a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2 col-xs-4">
-                                    <div class="nav-page-tabs">
-                                        <a class="quick-links" href="../about/index.html">About</a>
+                                        <div class="col-sm-4 col-xs-4 col-navbar">
+                                            <div class="nav-page-tabs">
+                                                <a class="quick-links" href="../about/Abhraneel_resume.pdf" target="_blank">Resume</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-xs-4 col-navbar">
+                                            <div class="nav-page-tabs">
+                                                <a class="quick-links" href="../about/index.html">About</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -69,16 +78,17 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </nav>
+
         <section id="portfolio">
-            <div class="container-fluid">
+            <div class="container-fluid" style="padding: 0px">
                 <div class="cover-image"></div>
             </div>
         	<div class="container">
                 <div class="row">
             		<div class="col-md-10 col-md-offset-1 margin-sm">
-        	    		<h1 class="page-header-text">Premier League Player Transfers</h1>
-        	    		<h3 class="sub-header-text">"The moneyball approach doesn't really work with football in the same way it does with baseball because of the game's free flowing nature."</h3>
+        	    		<h2 class="caption-title">Premier League Player Transfers</h2>
+        	    		<h3>"The moneyball approach doesn't really work with football in the same way it does with baseball because of the game's free flowing nature."</h3>
                         <div class="row">
                             <div class="col-md-6">
                                 <p class="body-text margin-top-md">The moneyball approach, an analytical, evidence-based approach to predicting a player's abilities, doesn't really work with football in the same way it does with baseball because of the game's free flowing nature. One of the reasons being touted is that there's two much chaos in the pattern of play to pick up players on secondary or unconventional performance stats.</p>
@@ -90,31 +100,47 @@
                         <h6 class="text-section-header margin-top-lg">The Problem</h6>
                         <div class="row">
                             <div class="col-md-6">
-                                <p class="body-text margin-top-md">The Premier League, arguably the biggest league in Football in terms of revenue, consistently dishes out large sums of money to sign players from all over Europe and the rest of the world. However, not all of their signings are able to deliver.</p>
+                                <p class="body-text">The Premier League, arguably the biggest league in Football in terms of revenue, consistently dishes out large sums of money to sign players from all over Europe and the rest of the world. However, not all of their signings are able to deliver.</p>
                             </div>
                             <div class="col-md-6">
-                                <p class="body-text margin-top-md">Notable examples include Juan Sebastian Veron and Angel Di Maria to Manchester United, Andriy Shevchenko and Fernando Torres to Chelsea, Andy Carrol to Liverpool, Robinho, Jovetic and a host of other players to Manchester City. <b>Why not?</b></p>
+                                <p class="body-text">Notable examples include Juan Sebastian Veron and Angel Di Maria to Manchester United, Andriy Shevchenko and Fernando Torres to Chelsea, Andy Carrol to Liverpool, Robinho, Jovetic and a host of other players to Manchester City. <b>Why not?</b></p>
                             </div>
                         </div>
                         <h6 class="text-section-header margin-top-lg">Team transfer activity</h6>
                         <div class="row">
                             <div class="col-sm-6">
-                	    		<p class="body-text margin-top-xs">
+                	    		<p class="body-text">
                 	    			I have accumulated transfer activity data for some of the bigger clubs in the Premier League. The viusalization compares this data with the clubs' position in the league in order to find any direct relationships. I have also included other significant events in the club during this period of time.
                 	    		</p>
                             </div>
                             <div class="col-sm-6">
-                                <p class="body-text margin-top-xs">
+                                <p class="body-text">
                                     <b>Transfer activity data:</b> Annual net expenditure on players and the net amount earned by selling players to other clubs.<br><br>
                                     <b>Significant event data:</b> Includes change of managers, achievement in european or other domestic competitions, change in club hierarchy or ownership etc.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="svg barVis col-sm-9"></div>
+                    <div class="col-sm-9"><div id="graph"></div></div>
                     <div class="team-details col-sm-3">
                         <p class="legend-header">Select Team:</p>
-                        <div class="dropdown custom-drop">
+                        <div class="checkbox">
+                            <label class="active"><input type="checkbox" id="Arsenal" onclick="toggle(this.id)" checked="checked">Arsenal</label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="active"><input type="checkbox" id="Chelsea" onclick="toggle(this.id)" checked="checked">Chelsea</label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="active"><input type="checkbox" id="Liverpool" onclick="toggle(this.id)" checked="checked">Liverpool</label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="active"><input type="checkbox" id="ManCity" onclick="toggle(this.id)" checked="checked">Manchester City</label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="active"><input type="checkbox" id="ManUtd" onclick="toggle(this.id)" checked="checked">Manchester United</label>
+                        </div>
+
+                        <!-- <div class="dropdown custom-drop">
                             <button class="btn btn-default dropdown-toggle btn-bar" type="button" data-toggle="dropdown" style="margin-left: 0px">Arsenal
                             <span class="caret"></span></button>
                             <ul class="dropdown-menu dropdown-bar">
@@ -124,7 +150,7 @@
                                 <li><a id="manshity" class="custom-btn" onclick="setBar(this.id, this.text)">Manchester City</a></li>
                                 <li><a id="man-utd" class="custom-btn" onclick="setBar(this.id, this.text)">Manchester United</a></li>
                             </ul>
-                        </div>
+                        </div> 
                         <div class="team-id"></div>
                         <div class="legend">
                             <p class="legend-header">Bar Chart</p>
@@ -137,39 +163,37 @@
                             <div class="color-box df" style="background-color: #ef4343"></div><div class="legend-text">Defenders (D)</div><br>
                             <div class="color-box mf" style="background-color: #bbd863"></div><div class="legend-text">Midfielders (M)</div><br>
                             <div class="color-box fw" style="background-color: #5159b7"></div><div class="legend-text">Forwards (F)</div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-md-10 col-md-offset-1">
                         <h6 class="text-section-header margin-top-lg">Observations</h6>
                         <div class="row">
                             <div class="col-sm-6">
-                                <p class="body-text margin-top-xs">
+                                <p class="body-text">
                                     The most significant observation is the <b>large amount of spending that invariably follows a takeover</b> of a club. Similarly, when <b>a new manager is appointed</b>, it usually entails significant amount of transfer activity.<br><br>However, there is <b>no direct evidence</b> to suggest that massive spending has a significant impact on the team's performance in the league.
                                 </p>
                             </div>
                             <div class="col-sm-6">
-                                <p class="body-text margin-top-xs">
+                                <p class="body-text">
                                     The latter point is apparent from the performances of Manchester City during the seasons through 2007-10; Chelsea in the 2011-12 season; and Manchester United in the 2014-15 and 2015-16 seasons. A better parameter to understand the reasons affecting team performance would be to look at the players that left the club and the players that were brought in to replace them.
                                 </p>
                             </div>
                         </div>
-                        <h6 class="text-section-header margin-top-lg">Analysis of player transfers</h6>
+                        <!-- <h6 class="text-section-header margin-top-lg">Analysis of player transfers</h6>
                         <div class="row">
                             <div class="col-md-6">
-                                <p class="body-text margin-top-xs">The formula for a successful team to continue in its success is often to appropriately replace the players in the team who have either retired or moved away to a different club. This can include bringing in new players from other clubs or promoting youth from the academy or a combination of both. Manchester United tends to stand out in this regard by consistently assembling a team that could successfully challenge for the league title across two decades.</p>
+                                <p class="body-text">The formula for a successful team to continue in its success is often to appropriately replace the players in the team who have either retired or moved away to a different club. This can include bringing in new players from other clubs or promoting youth from the academy or a combination of both. Manchester United tends to stand out in this regard by consistently assembling a team that could successfully challenge for the league title across two decades.</p>
                             </div>
                             <div class="col-md-6">
-                                <p class="body-text margin-top-xs">Very rarely do clubs undergo a major overhaul of their entire squad due to the immense expenditure that assembling a successful team entails. However there are examples of this too. Claudio Ranieri and Chelsea in 2003-04, Brendan Rogers and Liverppol in the 2014-15 season, Louis Van Gaal and Manchester United in both his seasons at the club and Manchester City almost every other season.</p>
+                                <p class="body-text">Very rarely do clubs undergo a major overhaul of their entire squad due to the immense expenditure that assembling a successful team entails. However there are examples of this too. Claudio Ranieri and Chelsea in 2003-04, Brendan Rogers and Liverppol in the 2014-15 season, Louis Van Gaal and Manchester United in both his seasons at the club and Manchester City almost every other season.</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
-                    <div class="svg scatterVis col-sm-9">
-                        <!-- Custom button style -->
+                    <!-- <div class="svg scatterVis col-sm-9">
                         <div class="btn-group" style="margin-top: 32px;">
                             <button type="button" value="bought" class="cstm-btn btn-wide btn-purchase" onclick="setAct(this.value)">Players Purchased</button>
                             <button type="button" value="sold" class="cstm-btn btn-wide btn-purchase" onclick="setAct(this.value)">Players Sold</button>
-                            <!-- <button type="button" value="academy" class="cstm-btn btn-wide btn-purchase" onclick="setAct(this.value)">Academy Players</button> -->
                         </div>
                         <div class="btn-group">
                             <button type="button" value="all" class="cstm-btn btn-narrow btn-pos" onclick="setFilter(this.value)">All Position</button>
@@ -194,11 +218,6 @@
                         </div>
                         <div class="team-id">
                         </div>
-                        <!-- <div class="legend">
-                            <p class="legend-header">Player Status Data</p>
-                            <div class="color-circle-outline in" style="border-color: #61B7D1"></div><div class="legend-text">Players coming In</div><br>
-                            <div class="color-circle-outline out" style="border-color: #F04F5A"></div><div class="legend-text">Players going Out</div>
-                        </div> -->
                         <div class="legend">
                             <p class="legend-header">Player Transfers Data</p>
                             <div class="color-box gk" style="background-color: #f9e648"></div><div class="legend-text">Goalkeepers (G)</div><br>
@@ -207,7 +226,7 @@
                             <div class="color-box fw" style="background-color: #5e95cf"></div><div class="legend-text">Forwards (F)</div>
                         </div>
                         <p class="margin-text margin-top-md">* <u>Players Sold</u> includes players which have been sold to other clubs, released by the club because the player or the club didn't renew the contract or a player has retired.</p>
-                    </div>
+                    </div> -->
                 </div>
         	</div>
             <div class="page-footer margin-top-xl">
@@ -215,52 +234,41 @@
             </div>
         </section>
     </body>
-    <script src="js/graph.js"></script>
+    <script src="js/transfers.js"></script>
     <!-- <script src="js/revenue.js"></script> -->
-    <script src="js/scatter.js"></script>
+    <!-- <script src="js/scatter.js"></script> -->
     <script>
-        $(function(){
-            $(".dropdown-menu.dropdown-bar").on('click', 'li a', function(){
-                $(".btn-bar:first-child").html($(this).text()+ ' <span class="caret"></span>');
-                //$(".btn-bar:first-child").val($(this).text());
-            });
-        })
-
         // $(function(){
-        //     $(".dropdown-menu.dropdown-scatter").on('click', 'li a', function(){
-        //         $(".btn-scatter:first-child").html($(this).text()+ ' <span class="caret"></span>');
-        //         $(".btn-scatter:first-child").val($(this).text());
+        //     $(".dropdown-menu.dropdown-bar").on('click', 'li a', function(){
+        //         $(".btn-bar:first-child").html($(this).text()+ ' <span class="caret"></span>');
         //     });
         // })
 
-        $('.btn-purchase').on('click', function(){
-            $('.btn-purchase').removeClass('cstm-active-class');
-            $(this).addClass('cstm-active-class');
-        })
+        var selected = ["Arsenal", "Chelsea", "Liverpool", "ManCity", "ManUtd"];
 
-        $('.btn-pos').on('click', function(){
-            $('.btn-pos').removeClass('cstm-active-class');
-            $(this).addClass('cstm-active-class');
-        })
+        function toggle(id){
+            checked = $("#"+id).is(":checked");
+            if (checked){
+                selected.push(id);
+            } else {
+                var index = selected.indexOf(id);
+                if (index > -1) {
+                    selected.splice(index, 1);
+                    d3.selectAll("g."+id).remove();
+                }
+            }
+            for (i=0; i<selected.length; i++){
+                d3.selectAll("g."+selected[i]).remove();
+                drawGraph(transfers[selected[i]], selected[i]);
+            }
+        }
+
+
 
          var lastScrollTop = 150;
 
          $(window).scroll(function() {
             var st = $(this).scrollTop();
-            /*if ($(document).scrollTop() > 450) {
-                $('nav').hide();
-                $('h1').hide();
-                $('.hr').hide();
-                $('.nav-page-tabs').hide();
-                $('.quick-links').hide();
-            }
-            else {
-                $('nav').show();
-                $('h1').show();
-                $('.hr').show();                
-                $('.nav-page-tabs').show();
-                $('.quick-links').show();
-            }*/
             if (st>420 && (st-lastScrollTop) > 5) {
                $('nav.navbar').hide();
             } else if ((st-lastScrollTop) < -30){
@@ -276,14 +284,5 @@
 
         ga('create', 'UA-79877752-1', 'auto');
         ga('send', 'pageview');
-
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:448403,hjsv:5};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
 </html>
